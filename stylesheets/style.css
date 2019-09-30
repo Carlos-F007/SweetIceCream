@@ -13,18 +13,73 @@ body{
 	max-width: 1000px;
 }
 
+.hero{
+	display: flex;
+	height: 100px;
+	background-color: #cceff1;
+}
 
 header .image{
 	width: 100%;
-	background-image: url('../images/helado.jpg');
+	background-image: url('../images/fondo.jpg');
 	background-size: cover;
-	padding-top: 20%;
+	height: 500px;
 	background-position: center;
+	position: relative;
 }
+
+header .text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2% 10%;
+}
+
+header .text ion-icon{
+	font-size: 200px;
+	color: #fff392;
+	margin-bottom: 40px;
+}
+
+header .text h2{
+	color: white;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+header .text h3{
+	color: #fff392;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+header .text h4{
+	color: #fff392;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+header .text a{
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0 ,0, 0, .4);
+	padding: 10px 15px;
+	border: 1px solid rgba(0 ,0, 0, .4);
+	border-radius: 20px;
+	transition: all 0.5s;
+}
+
+header .text a:hover{
+	background-color: white;
+	color: black;
+	border: 1px solid white;
+}
+
 
 .row{
 	display: flex;
 	padding-top: 10%;
+	padding-bottom: 20%;
 }
 
 .row .col{
@@ -33,9 +88,25 @@ header .image{
 }
 
 .product{
+	transition: all 0.5s;
+}
+
+/*.product:hover{
 	border: 1px solid #dadada;
 	border-radius: 3%;
-}
+	background-color: #f92950;
+	color: white;
+}*/
+
+/*.product:hover a{
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+}*/
+
+/*.product:hover p{
+	color: white;
+}*/
 
 .product .image{
 	display: flex;
@@ -44,19 +115,34 @@ header .image{
 }
 
 .product .image img{
-	width: 120px;
-	height: 120px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
+	transition: all 0.5s;
 }
 
-.product h2, p{
+.product:hover .image img{
+	box-shadow: 0 0 20px 15px #ffdea6;
+	transform: rotate(8deg);
+}
+
+.product h2{
 	text-align: center;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
 
+
 .product p{
 	color: gray;
+	text-align: left;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	transition: all 0.5s;
+}
+
+.product p ion-icon{
+	margin-bottom: -1px;
 }
 
 .product a{
@@ -66,4 +152,14 @@ header .image{
 	background-color: #25d366;
 	color: white;
 	padding: 20px;
+	transition: all 0.5s;
+	font-size: 20px;
+}
+
+.product a ion-icon{
+	margin-right: 10px;
+}
+
+.product a:hover{
+	background-color: #22de68;
 }
