@@ -24,7 +24,7 @@ header .image{
 	background-image: url('../images/fondo.jpg');
 	background-size: cover;
 	height: 500px;
-	background-position: center;
+	background-position: left;
 	position: relative;
 }
 
@@ -33,12 +33,14 @@ header .text{
 	top: 0;
 	left: 0;
 	padding: 2% 10%;
+	overflow: hidden;
+	width: 100%;
 }
 
 header .text ion-icon{
 	font-size: 200px;
 	color: #fff392;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 header .text h2{
@@ -51,6 +53,15 @@ header .text h3{
 	color: #fff392;
 	font-size: 30px;
 	margin-bottom: 10px;
+	width: 45%;
+	min-width: 299px;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+header:hover .text h3{
+	width: 100%;
 }
 
 header .text h4{
@@ -84,7 +95,7 @@ header .text a:hover{
 
 .row .col{
 	width: 33.33%;
-	margin-right: 20px;
+	padding: 10px;
 }
 
 .product{
@@ -112,13 +123,41 @@ header .text a:hover{
 	display: flex;
 	justify-content: center;
 	margin-top: 15px;
-}
-
-.product .image img{
+	position: relative;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.product .image img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 	transition: all 0.5s;
+}
+
+.product .price{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	font-size: 20px;
+	background-color: #25d366;
+	padding: 10px;
+	border-radius: 50%;
+	color: white;
+	font-weight: bold;
+	width: 65px;
+	height: 65px;
+	transition: all 0.5s;
+}
+
+.product:hover .price{
+	background-color: #11e25f;
 }
 
 .product:hover .image img{
@@ -162,4 +201,15 @@ header .text a:hover{
 
 .product a:hover{
 	background-color: #22de68;
+}
+
+@media screen and (max-width: 742px){
+	.row{
+		flex-wrap: wrap;
+	}
+
+	.row .col{
+		width: 100%;
+		margin-bottom: 60px;
+	}
 }
