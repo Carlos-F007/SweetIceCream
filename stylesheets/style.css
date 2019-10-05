@@ -91,7 +91,7 @@ header .text a:hover{
 .row{
 	display: flex;
 	padding-top: 10%;
-	padding-bottom: 20%;
+	padding-bottom: 5%;
 }
 
 .row .col{
@@ -202,6 +202,21 @@ header .text a:hover{
 
 .product a:hover{
 	background-color: #22de68;
+}
+
+.social{
+	text-align: center;
+	padding-bottom: 10%;
+	 
+}
+.social a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 42px;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 40px;
+	background: #f31f64;
 }
 
 @media screen and (max-width: 742px){
