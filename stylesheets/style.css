@@ -218,6 +218,9 @@ header .text a:hover{
 	border-radius: 40px;
 	background: #f31f64;
 }
+.social a ion-icon, .social a span{
+	vertical-align: middle;
+}
 
 @media screen and (max-width: 742px){
 	.row{
